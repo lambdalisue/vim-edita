@@ -1,4 +1,4 @@
-let s:quit_expr = "\<C-\>\<C-n>iPatequit"
+let s:quit_expr = "\<C-\>\<C-n>iEditaquit"
 
 function! edita#vim#editor#open(target, bufnr)
   execute printf('%s %s', g:edita#opener, fnameescape(a:target))

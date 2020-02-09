@@ -9,8 +9,8 @@ function! edita#vim#client#open() abort
   for nr in range(256)
     silent! execute printf("cnoremap \<buffer>\<silent> \<Char-%d> \<Nop>", nr)
   endfor
-  " Accept 'Patequit' to quit
-  silent! cnoremap <buffer> Patequit <C-u>OK<Return>
+  " Accept 'Editaquit' to quit
+  silent! cnoremap <buffer> Editaquit <C-u>OK<Return>
   silent! cnoremap <buffer> <C-c> <Esc>
   let r = input(printf('Waiting %s. Hit Ctrl-C to cancel', target))
   if !empty(r)
