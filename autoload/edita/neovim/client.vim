@@ -11,7 +11,6 @@ function! edita#neovim#client#open() abort
         \ target,
         \ client,
         \))
-  echomsg printf('Waiting %s. Hit Ctrl-C to cancel', target)
 endfunction
 
 function! edita#neovim#client#EDITOR() abort
