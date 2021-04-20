@@ -8,7 +8,7 @@
 An pseudo `EDITOR` to open a file in a working Vim/Neovim instead of a new one.
 It has no external dependencies.
 
-**This is in alpha stabe. Anything will be drastically changed without announcement.**
+**This is in alpha stage. Anything will be drastically changed without announcement.**
 
 ## Usage
 
