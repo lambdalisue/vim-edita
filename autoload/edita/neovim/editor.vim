@@ -10,7 +10,7 @@ function! edita#neovim#editor#open(target, client)
 endfunction
 
 function! s:BufDelete() abort
-  let ch = getbufvar(expand('<afile>'), 'edita', v:null)
+  let ch = getbufvar(str2nr(expand('<abuf>')), 'edita', v:null)
   if ch is# v:null
     return
   endif

@@ -11,7 +11,7 @@ function! edita#vim#editor#open(target, bufnr)
 endfunction
 
 function! s:BufDelete() abort
-  let bufnr = getbufvar(expand('<afile>'), 'edita', v:null)
+  let bufnr = getbufvar(str2nr(expand('<abuf>')), 'edita', v:null)
   if bufnr is# v:null
     return
   endif
