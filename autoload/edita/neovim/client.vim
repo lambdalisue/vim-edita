@@ -4,7 +4,8 @@ function! edita#neovim#client#open() abort
   let server = $NVIM_LISTEN_ADDRESS
   let mode = edita#neovim#util#mode(server)
   let ch = sockconnect(mode, server, { 'rpc': 1 })
-  let target = fnamemodify(argv()[-1], ':p')
+  let args = argv()
+  let target = len(args) != 0 ? fnamemodify(args[-1], ':p') : ""
   let client = serverstart()
   call rpcrequest(ch, 'nvim_command', printf(
         \ 'call edita#neovim#editor#open("%s", "%s")',

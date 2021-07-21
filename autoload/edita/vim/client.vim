@@ -2,7 +2,8 @@ let s:repo = fnamemodify(expand('<sfile>'), ':p:h:h:h:h')
 
 function! edita#vim#client#open() abort
   bwipeout!
-  let target = fnamemodify(argv()[-1], ':p')
+  let args = argv()
+  let target = len(args) != 0 ? fnamemodify(args[-1], ':p') : ""
   call s:send(['call', 'Tapi_edita_open', [target]])
   enew | redraw
   " Disable mappings to prevent accidental edit
