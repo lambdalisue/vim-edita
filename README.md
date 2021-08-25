@@ -1,3 +1,6 @@
+# DEPRECATED
+This repository has deprecated due to https://github.com/lambdalisue/guise.vim
+
 # 🖊edita.vim
 
 ![Version 0.0](https://img.shields.io/badge/version-0.0-yellow.svg)
